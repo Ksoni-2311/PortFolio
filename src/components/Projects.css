@@ -1,0 +1,79 @@
+/* Overall section */
+
+.Project-area {
+    background-color: #0D1B2A;
+    margin-top: 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+/* Title style */
+.Project-title {
+    color: #B3AF8F;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 2px;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideRight 3s ease-in forwards;
+    animation-timeline:view();
+    animation-range:entry 0% cover 60% ;
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Horizontal scroll container */
+.Projects-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 40px;
+    padding: 20px;
+    width: 90%;
+    scrollbar-width: none; /* Firefox */
+    margin-top: -20px;
+}
+
+.Projects-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Individual video container */
+.video-wrapper {
+    scroll-snap-align: center;
+    flex: 0 0 60%;
+    max-width: 400px;
+    height: 540px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #1B263B;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+    transition: transform 0.9s ease;
+    transform: scale(0.8);
+}
+
+.video:hover {
+    transform: scale(0.99);
+    cursor: pointer;
+    border:5px #B3AF8F solid;
+    box-shadow: 10px ;
+}

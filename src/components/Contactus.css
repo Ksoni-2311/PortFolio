@@ -1,0 +1,67 @@
+.Contactus-class{
+    align-items: center;
+    text-align: center;
+}
+.contact-us-top{
+    color: #B3AF8F;
+    text-shadow:0px 5px 3px #71afdb ;
+    text-shadow:8px 5px 3px #4586b5 ;
+    text-align: center;
+    font-weight:bold;
+    font-size:100px;
+    margin-top: 20px;
+    animation: slideDown 2s ease-in  forwards;
+}
+@keyframes slideDown {
+    0%{
+        transform:translateY(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.social-handles-box{
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+}
+.Editor-insta-details{
+    background-color: #E0E1DD;
+    height:450px;
+    width: 35%;
+    border-radius:20px;
+    box-shadow: 0px 0px 300px rgba(255, 0, 0, 5);
+}
+.Editor-whatsapp-details{
+    background-color:#E0E1DD;
+    height:450px;
+    border-radius:20px;
+    width: 35%;
+    box-shadow: 0px 0px 300px rgba(125, 200, 1500, 5);
+    
+}
+.Editor-insta-details,
+.Editor-whatsapp-details  h1{
+    font-size:xx-large;
+    
+    font-weight: bolder;
+    font-family: cursive;
+}
+.Editor-insta-details img,.Editor-whatsapp-details img{
+    height:80%;
+    width: 95%;
+    object-fit: contain;
+    object-position: 85px;
+    align-items: center;
+    margin-top:20px;
+    background-color: transparent;
+}
+.Editor-whatsapp-details img{
+    width: 100%;
+    height: 80%;
+}
+.Contactus-class h2{
+    color:white;
+}

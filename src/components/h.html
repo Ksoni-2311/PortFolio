@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .top-logo {
+            flex: 1;
+        }
+
+        .top-logo img {
+            height: 80px;
+        }
+
+        .spacer {
+            flex: 3;
+        }
+
+        .top-bar {
+            flex: 5;
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-logo" id="main-logo">
+            <img src="../logo.jpeg" alt="Company Logo">
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="top-bar" id="top-bar">
+            <a href="#Home">Home</a>
+            <a href="#AboutUs">About Us</a>
+            <a href="#Contact">Contact</a>
+            <a href="#OurWork">Our Work</a>
+        </div>
+    </div>
+</body>
+</html>
