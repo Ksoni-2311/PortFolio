@@ -356,7 +356,7 @@
   }
 
   .carousel-container {
-    margin-left: -90px;
+    margin-left: 80px;
   }
 
   .carousel-inner {
@@ -366,6 +366,7 @@
   .carousel-video {
     max-width: 600px;
     max-height: 80%;
+    margin: left 50px;
   }
 
   .arrow {
