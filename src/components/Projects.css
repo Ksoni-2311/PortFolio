@@ -1,4 +1,6 @@
-/* Main section */
+/* ----------------------------
+   Main Section
+---------------------------- */
 .Project-area {
     background-color: #0D1B2A;
     min-height: 100vh;
@@ -8,10 +10,11 @@
     gap: 2rem;
     padding: 2rem;
     overflow: hidden;
-    
 }
 
-/* Title */
+/* ----------------------------
+   Title
+---------------------------- */
 .Project-title {
     color: #B3AF8F;
     font-weight: bold;
@@ -31,15 +34,17 @@
     }
 }
 
-/* Carousel layout */
+/* ----------------------------
+   Carousel Layout
+---------------------------- */
 .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     position: relative;
-    margin-top:-5px;
-    margin-left:-90px;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 .carousel-track {
@@ -50,7 +55,7 @@
 .carousel-inner {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    scale:1.5;
+    scale: 1.5;
 }
 
 .carousel-card {
@@ -64,16 +69,17 @@
 }
 
 .carousel-video {
-    /* width:0%; */
-    max-width:600px;
-    max-height:80%;
+    max-width: 600px;
+    max-height: 80%;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     background-color: #1B263B;
 }
 
-/* Arrows */
+/* ----------------------------
+   Arrows
+---------------------------- */
 .arrow {
     position: absolute;
     top: 50%;
@@ -94,20 +100,21 @@
 }
 
 .arrow.left {
-    left: 100px;
+    left: 40px;
 }
 
 .arrow.right {
-    right: 10px;
+    right: 40px;
 }
 
-/* Instagram link */
+/* ----------------------------
+   Instagram Link
+---------------------------- */
 .instagram-link {
     color: #B3AF8F;
     font-size: 18px;
-    margin-top: 30px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .instagram-link a {
@@ -118,270 +125,137 @@
 .instagram-link a:hover {
     color: #fff;
 }
+
 /* ----------------------------
-   Responsive Styles for Project Section
+   Responsive Styles
 ---------------------------- */
 
 /* Phones (max-width: 600px) */
 @media (max-width: 600px) {
-  .Project-title {
-    font-size: 32px;
-    padding: 0 10px;
-  }
+    .Project-title {
+        font-size: 32px;
+        padding: 0 10px;
+    }
 
-  .carousel-container {
-    flex-direction: column;
-    margin-left: 0;
-    margin-top: 10px;
-  }
+    .carousel-container {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 10px;
+    }
 
-  .carousel-inner {
-    scale: 1;
-    flex-direction: row;
-  }
+    .carousel-inner {
+        scale: 1;
+        flex-direction: row;
+    }
 
-  .carousel-card {
-    height: auto;
-    padding: 0.5rem;
-  }
+    .carousel-card {
+        height: auto;
+        padding: 0.5rem;
+    }
 
-  .carousel-video {
-    max-width: 100%;
-    max-height: 250px;
-    border-radius: 10px;
-  }
+    .carousel-video {
+        max-width: 100%;
+        max-height: 250px;
+        border-radius: 10px;
+    }
 
-  .arrow {
-    font-size: 2.5rem;
-    padding: 0.3rem 0.6rem;
-  }
+    .arrow {
+        font-size: 2.5rem;
+        padding: 0.3rem 0.6rem;
+    }
 
-  .arrow.left {
-    left: 10px;
-  }
+    .arrow.left {
+        left: 10px;
+    }
 
-  .arrow.right {
-    right: 10px;
-  }
+    .arrow.right {
+        right: 10px;
+    }
 
-  .instagram-link {
-    font-size: 14px;
-    margin-top: 20px;
-  }
+    .instagram-link {
+        font-size: 14px;
+        margin-top: 20px;
+    }
 }
 
 /* Tablets (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .Project-title {
-    font-size: 45px;
-    padding: 0 15px;
-  }
+    .Project-title {
+        font-size: 45px;
+        padding: 0 15px;
+    }
 
-  .carousel-container {
-    margin-left: 0;
-    margin-top: 20px;
-  }
+    .carousel-container {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 
-  .carousel-inner {
-    scale: 1.2;
-  }
+    .carousel-inner {
+        scale: 1.2;
+    }
 
-  .carousel-card {
-    height: auto;
-    padding: 1rem;
-  }
+    .carousel-card {
+        height: auto;
+        padding: 1rem;
+    }
 
-  .carousel-video {
-    max-width: 90%;
-    max-height: 400px;
-    border-radius: 15px;
-  }
+    .carousel-video {
+        max-width: 90%;
+        max-height: 400px;
+        border-radius: 15px;
+    }
 
-  .arrow {
-    font-size: 3.5rem;
-    padding: 0.4rem 0.8rem;
-  }
+    .arrow {
+        font-size: 3.5rem;
+        padding: 0.4rem 0.8rem;
+    }
 
-  .arrow.left {
-    left: 30px;
-  }
+    .arrow.left {
+        left: 20px;
+    }
 
-  .arrow.right {
-    right: 30px;
-  }
+    .arrow.right {
+        right: 20px;
+    }
 
-  .instagram-link {
-    font-size: 16px;
-    margin-top: 10px;
-  }
+    .instagram-link {
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }
 
 /* Desktops and Large Screens (1025px and up) */
 @media (min-width: 1025px) {
-  .Project-title {
-    font-size: 60px;
-  }
+    .Project-title {
+        font-size: 60px;
+    }
 
-  .carousel-container {
-    margin-left: -90px;
-  }
+    .carousel-container {
+        margin-left: 0;
+    }
 
-  .carousel-inner {
-    scale: 1.5;
-  }
+    .carousel-inner {
+        scale: 1.5;
+    }
 
-  .carousel-video {
-    max-width: 600px;
-    max-height: 80%;
-  }
+    .carousel-video {
+        max-width: 600px;
+        max-height: 80%;
+    }
 
-  .arrow {
-    font-size: 5rem;
-  }
+    .arrow {
+        font-size: 5rem;
+    }
 
-  .arrow.left {
-    left: 100px;
-  }
+    .arrow.left {
+        left: 40px;
+    }
 
-  .arrow.right {
-    right: 10px;
-  }
+    .arrow.right {
+        right: 40px;
+    }
 
-  .instagram-link {
-    font-size: 18px;
-  }
-}
-/* ----------------------------
-   Responsive Styles for Project Section
----------------------------- */
-
-/* Phones (max-width: 600px) */
-@media (max-width: 600px) {
-  .Project-title {
-    font-size: 32px;
-    padding: 0 10px;
-  }
-
-  .carousel-container {
-    flex-direction: column;
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .carousel-inner {
-    scale: 1;
-    flex-direction: row;
-  }
-
-  .carousel-card {
-    height: auto;
-    padding: 0.5rem;
-  }
-
-  .carousel-video {
-    max-width: 100%;
-    max-height: 250px;
-    border-radius: 10px;
-  }
-
-  .arrow {
-    font-size: 2.5rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  .arrow.left {
-    left: 10px;
-  }
-
-  .arrow.right {
-    right: 10px;
-  }
-
-  .instagram-link {
-    font-size: 14px;
-    margin-top: 20px;
-  }
-}
-
-/* Tablets (601px to 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .Project-title {
-    font-size: 45px;
-    padding: 0 15px;
-  }
-
-  .carousel-container {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .carousel-inner {
-    scale: 1.2;
-  }
-
-  .carousel-card {
-    height: auto;
-    padding: 1rem;
-  }
-
-  .carousel-video {
-    max-width: 90%;
-    max-height: 400px;
-    border-radius: 15px;
-  }
-
-  .arrow {
-    font-size: 3.5rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .arrow.left {
-    left: 30px;
-  }
-
-  .arrow.right {
-    right: 30px;
-  }
-
-  .instagram-link {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-}
-
-/* Desktops and Large Screens (1025px and up) */
-@media (min-width: 1025px) {
-  .Project-title {
-    font-size: 60px;
-  }
-
-  .carousel-container {
-    margin-left: 80px;
-  }
-
-  .carousel-inner {
-    scale: 1.5;
-  }
-
-  .carousel-video {
-    max-width: 600px;
-    max-height: 80%;
-    margin: left 50px;
-  }
-
-  .arrow {
-    font-size: 5rem;
-  }
-
-  .arrow.left {
-    left: 100px;
-  }
-
-  .arrow.right {
-    right: 10px;
-  }
-
-  .instagram-link {
-    font-size: 18px;
-  }
+    .instagram-link {
+        font-size: 18px;
+    }
 }
