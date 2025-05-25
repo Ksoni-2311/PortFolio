@@ -8,7 +8,7 @@ body{
     display:flex;
     align-items: center;
     justify-content:center ;
-    margin-top: 55px;
+    margin-top: 5px;
     column-gap:120px;
     height:100%;
     color: rgb(128, 229, 235);
@@ -254,4 +254,151 @@ background: linear-gradient(45deg, #000 ,#05e4ca,#e8e8e8);
         transform:translateX(0) ; 
         opacity: 1;   
     }
+}
+
+
+/* ----------------------------
+   Responsive Styles for Home
+---------------------------- */
+
+/* Phones (max-width: 600px) */
+@media (max-width: 600px) {
+  .Home-class {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    column-gap: 0;
+    margin-top: 260px;
+    text-align: center;
+  }
+
+  .Home-nonText-box {
+    margin: 0;
+  }
+
+  .editor-pic-box {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  .editor-pic-box::before {
+    width: 270px;
+    height: 270px;
+    top: -10px;
+    left: -10px;
+  }
+
+  .editor-info-box {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .editor-info-box h1 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .AboutBox {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .skills-info {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .skillsBox .editor-skills {
+    margin-bottom: 30px;
+  }
+}
+
+/* Tablets (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .Home-class {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .editor-pic-box {
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    align-items: center;
+  }
+
+  .Home-nonText-box{
+    margin-left:180px ;
+  }
+  .editor-pic-box::before {
+    width: 320px;
+    height: 320px;
+  }
+
+  .editor-info-box {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 17px;
+  }
+
+  .editor-info-box h1 {
+    font-size: 32px;
+  }
+
+  .skills-info {
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    font-size: 15px;
+    margin: 0;
+    padding-left: 120px;
+  }
+}
+.AboutBox{
+  padding-left:20px;
+  padding-right:50px;
+}
+
+/* Desktops and large screens (1025px and up) */
+@media (min-width: 1025px) {
+  .Home-class {
+    flex-direction: row;
+    gap: 120px;
+    padding: 60px;
+    margin-top: 80px;
+  }
+
+  .editor-pic-box {
+    width: 400px;
+    height: 400px;
+  }
+
+  .editor-pic-box::before {
+    width: 500px;
+    height: 500px;
+  }
+
+  .editor-info-box {
+    width: 500px;
+    font-size: large;
+  }
+
+  .skills-info {
+    flex-direction: row;
+    width: 150%;
+    column-gap: 40px;
+    margin-left: -80px;
+  }
 }

@@ -108,3 +108,83 @@ h2 {
     transform: translateY(0);
   }
 }
+/* ------------------------------
+   Responsive Styles for Our Plans Section
+------------------------------ */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .Our-Plans-title {
+    font-size: 36px;
+    padding: 0 10px;
+    text-shadow: 4px 4px 3px rgba(144, 91, 222, 0.6),
+                 -4px 4px 3px rgba(147, 107, 206, 0.6);
+  }
+
+  .Our-Plans {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .plans {
+    max-width: 90%;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .Our-Plans-title {
+    font-size: 60px;
+    padding: 0 20px;
+    text-shadow: 6px 6px 4px rgba(144, 91, 222, 0.7),
+                 -6px 6px 4px rgba(147, 107, 206, 0.7);
+  }
+
+  .Our-Plans {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .plans {
+    max-width: 80%;
+    padding: 25px;
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .value {
+    font-size: 15px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1025px) {
+  .Our-Plans-title {
+    font-size: 100px;
+  }
+
+  .Our-Plans {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+
+  .plans {
+    max-width: 500px;
+  }
+}

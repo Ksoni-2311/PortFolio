@@ -1,51 +1,106 @@
 .footer-container {
-    background-color: #111;
-    color: #f0f0f0;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
 }
 
+/* Centered content with max width */
 .footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
+/* Heading */
 .footer-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
+/* Paragraph text */
 .footer-content p {
-    font-size: 16px;
-    margin: 8px 0;
+  font-size: 16px;
+  margin: 8px 0;
+  line-height: 1.5;
 }
 
+/* Social icons container */
 .footer-socials {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
+/* Social links */
 .footer-socials a {
-    color: #aaa;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px; /* slightly larger for touch devices */
+  transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-    color: #fff;
+  color: #fff;
 }
 
+/* Footer copyright */
 .footer-copy {
-    font-size: 44px;
-    letter-spacing: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: xx-large;
-    margin-top: 30px;
-    color: #f0ea31;
+  font-size: 44px;
+  letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-top: 30px;
+  color: #f0ea31;
+  word-wrap: break-word;
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* Medium screens - tablets */
+@media (max-width: 768px) {
+  .footer-content h3 {
+    font-size: 20px;
+  }
+  .footer-content p {
+    font-size: 14px;
+  }
+  .footer-socials a {
+    font-size: 18px;
+  }
+  .footer-copy {
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+}
+
+/* Small screens - mobiles */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 15px;
+  }
+  .footer-content {
+    max-width: 100%;
+  }
+  .footer-content h3 {
+    font-size: 18px;
+  }
+  .footer-content p {
+    font-size: 13px;
+  }
+  .footer-socials {
+    gap: 15px;
+  }
+  .footer-socials a {
+    font-size: 16px;
+  }
+  .footer-copy {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
 }
