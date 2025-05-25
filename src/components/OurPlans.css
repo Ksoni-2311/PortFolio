@@ -119,6 +119,7 @@ h2 {
     padding: 0 10px;
     text-shadow: 4px 4px 3px rgba(144, 91, 222, 0.6),
                  -4px 4px 3px rgba(147, 107, 206, 0.6);
+                 margin-top:-380px;
   }
 
   .Our-Plans {
