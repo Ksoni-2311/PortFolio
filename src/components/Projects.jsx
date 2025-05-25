@@ -14,15 +14,46 @@ const Project = () => {
     const videoRefs = useRef([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Track played videos to ensure each plays only once
+    const playedVideos = useRef(new Set());
+
+    // Detect if the Project section is in view
+    const sectionRef = useRef(null);
+    const [inView, setInView] = useState(false);
+
     useEffect(() => {
-        // Pause all, play current
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setInView(entry.isIntersecting);
+            },
+            { threshold: 0.3 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
         videoRefs.current.forEach((video, index) => {
-            if (video) {
-                if (index === currentIndex) video.play();
-                else video.pause();
+            if (!video) return;
+            if (index === currentIndex && inView) {
+                if (!playedVideos.current.has(index)) {
+                    video.play();
+                    playedVideos.current.add(index);
+                }
+            } else {
+                video.pause();
+                video.currentTime = 0;
             }
         });
-    }, [currentIndex]);
+    }, [currentIndex, inView]);
 
     const handleArrowClick = (direction) => {
         let newIndex = currentIndex;
@@ -35,7 +66,7 @@ const Project = () => {
     };
 
     return (
-        <div className="Project-area" id="Project-area">
+        <div className="Project-area" id="Project-area" ref={sectionRef}>
             <div className="Project-title">OUR PROJECTS</div>
 
             <div className="carousel-container">
@@ -46,20 +77,15 @@ const Project = () => {
                 <div className="carousel-track">
                     <div
                         className="carousel-inner"
-                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                        >
-                            
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {videos.map((videoSrc, index) => (
                             <div className="carousel-card" key={index}>
-                                
-                                
                                 <video
                                     ref={(el) => (videoRefs.current[index] = el)}
                                     src={videoSrc}
-                                    muted
-                                    playsInline
-                                    loop
                                     className="carousel-video"
+                                    controls
+                                    playsInline
                                 />
                             </div>
                         ))}
@@ -74,13 +100,12 @@ const Project = () => {
             <div className="instagram-link">
                 For more do visit our{' '}
                 <a
-                    href="https://www.instagram.com/_aman_edits_05?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+                    href="https://www.instagram.com/_aman_edits_05"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Instagram
-                </a>{' '}
-                page
+                </a>{' '}page
             </div>
         </div>
     );
